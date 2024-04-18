@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<!--  verbose means = debugging level of testng the minimum value of verbose is 1
+and maximium vale of verbose is 10
+we dont want to define verbose any where it is defined already in testng          -->
+
+<suite name="Open Cart Regression Suite" verbose="3">
+
+	<listeners>
+	<!-- 	<listener class-name="com.qa.opencart.listeners.ExtentReportListener" /> -->
+		<listener class-name="com.qa.opencart.listeners.TestAllureListener" />
+		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer" />
+	</listeners>
+
+
+	<test name="Login Page Test chrome">
+		<parameter name="browser" value="chrome" />
+		<!-- 	<parameter name="url" value="https://www.google.com" />
+		<parameter name="headless" value="true" />      -->
+
+		<classes>
+			<class name="com.qa.opencartTest.LoginPageTest" />
+		</classes>
+	</test>
+
+
+	<test name="Login Page Test firefox">
+		<parameter name="browser" value="firefox" />
+		<!-- 	<parameter name="url" value="https://www.google.com" />
+		<parameter name="headless" value="true" />      -->
+
+		<classes>
+			<class name="com.qa.opencartTest.LoginPageTest" />
+		</classes>
+	</test>
+
+
+		<test name="Accounts Page Test">
+		<parameter name="browser" value="firefox" />
+		 	<parameter name="url"
+			value="https://www.orangehrm.com/30-day-free-trial/" />
+		<parameter name="headless" value="true" />     
+
+
+		<classes>
+			<class name="com.qa.opencartTest.AccountsPageTest" />
+		</classes>
+	</test>
+
+	
+	<!-- <test name="Search Result Page Test">
+		<parameter name="browser" value="chrome" />
+		 	<parameter name="url" value="https://www.orangehrm.com/30-day-free-trial/" />
+		<parameter name="headless" value="true" />     
+
+
+		<classes>
+			<class name="com.qa.opencartTest.SearchResultTest" />
+		</classes>
+	</test>
+
+	<test name="Product Info Page Test">
+		<parameter name="browser" value="edge" />
+		 	<parameter name="url" value="https://www.orangehrm.com/30-day-free-trial/" />
+		<parameter name="headless" value="true" />     
+
+
+		<classes>
+			<class name="com.qa.opencartTest.ProductPageInfoTest" />
+		</classes>
+	</test>
+	<test name="Register Page Test">
+		<parameter name="browser" value="firefox" />
+		 	<parameter name="url"
+			value="https://www.orangehrm.com/30-day-free-trial/" />
+		<parameter name="headless" value="true" />     
+
+
+		<classes>
+			<class name="com.qa.opencartTest.RegisterationPageTest" />
+		</classes>
+	</test>-->
+
+</suite>
