@@ -17,7 +17,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.qa.opencart.Factory.DriverFactory;
 
-public class ExtendReportListener implements ITestListener{
+public class ExtentReportListener implements ITestListener {
 	
 	private static final String OUTPUT_FOLDER = "./reports/";
 	private static final String FILE_NAME = "TestExecutionReport.html";
@@ -124,5 +124,6 @@ public class ExtendReportListener implements ITestListener{
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
 	}
+
 
 }
