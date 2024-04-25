@@ -75,77 +75,77 @@ public class DriverFactory {
 	}
 	
 
-//	public Properties initProp() {
-//		
-//		//envName = qa,stage, prod, uat, dev
-//		//mvn clean install -Denv="qa"
-//		
-//		FileInputStream fis = null;
-//		prop = new Properties();
-//		
-//		String envName = System.getProperty("env");
-//		//System.out.println("Running Test in Env: " + envName);
-//		log.info("Running Test in Env: " + envName);
-//		try {
-//		if(envName == "null") {
-//			//System.out.println("No env is given.... hence running it on QA env");
-//			log.info("No env is given.... hence running it on QA env");
-//			fis = new FileInputStream("./src/test/resources/Config/Config.qa.properties");
-//		}
-//		else {
-//		
-//		switch (envName.toLowerCase().trim()) {
-//		case "qa":
-//			 fis = new FileInputStream("./src/test/resources/Config/Config.qa.properties");
-//			break;
-//		case "dev":
-//			 fis = new FileInputStream("./src/test/resources/Config/Config.dev.properties");
-//			break;
-//		case "stage":
-//			 fis = new FileInputStream("./src/test/resources/Config/Config.stage.properties");
-//			break;
-//		case "uat":
-//			 fis = new FileInputStream("./src/test/resources/Config/Config.uat.properties");
-//			break;
-//		case "prod":
-//			fis = new FileInputStream("./src/test/resources/Config/Config.properties");
-//			break;
-//		default:
-//		//	System.out.println("plz pass the right browser name.... " + envName);
-//			log.info("plz pass the right browser name...." + envName);
-//			throw new FrameWorkException(Apperror.EN_NAME_NOT_FOUND + " : " + envName);
-//		}
-//	}
-//		}catch(FileNotFoundException e) {
-//			e.printStackTrace();
-//		}
-//		
-//	try {
-//		prop.load(fis);
-//	} catch (IOException e) {
-//		e.printStackTrace();
-//	}
-//	
-//	return prop;
-//	}
-	
-	
 	public Properties initProp() {
-		prop = new Properties();
-			try {
-				FileInputStream	fis = new FileInputStream("./src/test/resources/Config/Config.properties");
-				try {
-					prop.load(fis);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-			
-			return prop;
 		
-     	}
+		//envName = qa,stage, prod, uat, dev
+		//mvn clean install -Denv="qa"
+		
+		FileInputStream fis = null;
+		prop = new Properties();
+		
+		String envName = System.getProperty("env");
+		//System.out.println("Running Test in Env: " + envName);
+		log.info("Running Test in Env: " + envName);
+		try {
+		if(envName == "null") {
+			//System.out.println("No env is given.... hence running it on QA env");
+			log.info("No env is given.... hence running it on QA env");
+			fis = new FileInputStream("./src/test/resources/Config/Config.qa.properties");
+		}
+		else {
+		
+		switch (envName.toLowerCase().trim()) {
+		case "qa":
+			 fis = new FileInputStream("./src/test/resources/Config/Config.qa.properties");
+			break;
+		case "dev":
+			 fis = new FileInputStream("./src/test/resources/Config/Config.dev.properties");
+			break;
+		case "stage":
+			 fis = new FileInputStream("./src/test/resources/Config/Config.stage.properties");
+			break;
+		case "uat":
+			 fis = new FileInputStream("./src/test/resources/Config/Config.uat.properties");
+			break;
+		case "prod":
+			fis = new FileInputStream("./src/test/resources/Config/Config.properties");
+			break;
+		default:
+		//	System.out.println("plz pass the right browser name.... " + envName);
+			log.info("plz pass the right browser name...." + envName);
+			throw new FrameWorkException(Apperror.EN_NAME_NOT_FOUND + " : " + envName);
+		}
+	}
+		}catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	try {
+		prop.load(fis);
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	
+	return prop;
+	}
+	
+	
+//	public Properties initProp() {
+//		prop = new Properties();
+//			try {
+//				FileInputStream	fis = new FileInputStream("./src/test/resources/Config/Config.properties");
+//				try {
+//					prop.load(fis);
+//				} catch (IOException e) {
+//					e.printStackTrace();
+//				}
+//			} catch (FileNotFoundException e) {
+//				e.printStackTrace();
+//			}
+//			
+//			return prop;
+//		
+//     	}
 	
 	/**
 	 * take screenshot
