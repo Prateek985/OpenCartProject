@@ -10,9 +10,8 @@ we dont want to define verbose any where it is defined already in testng        
 
 	<listeners>
 		<listener class-name="com.qa.opencart.listeners.ExtentReportListener" />
-		<!--	<listener class-name="com.qa.opencart.listeners.TestAllureListener"
-		/>
-		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer" /> -->
+		<listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer" />
 	</listeners>
 
 
