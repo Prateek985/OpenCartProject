@@ -25,6 +25,7 @@ public class LoginPage {
 	private By login = By.xpath("//input[@type='submit']");
 	private By forgetPWdLink = By.linkText("Forgotten Password");
 	private By registerLink = By.linkText("Register");
+	
 
 	// we will create a page class constructor as well
 	public LoginPage(WebDriver driver) {
