@@ -10,7 +10,7 @@ we dont want to define verbose any where it is defined already in testng        
 
 	<listeners>
 		<listener class-name="com.qa.opencart.listeners.ExtentReportListener" />
-		<listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+		<listener class-name="com.qa.opencart.listeners.TestAllureListener" />
 		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer" />
 	</listeners>
 
@@ -25,29 +25,17 @@ we dont want to define verbose any where it is defined already in testng        
 		</classes>
 	</test>
 
-
-	<!--	<test name="Login Page Test firefox">
+	<test name="Accounts Page Test">
 		<parameter name="browser" value="firefox" />
-			<parameter name="url" value="https://www.google.com" />
-		<parameter name="headless" value="true" />      
-
-		<classes>
-			<class name="com.qa.opencartTest.LoginPageTest" />
-		</classes>
-	</test>
-
-
-		<test name="Accounts Page Test">
-		<parameter name="browser" value="firefox" />
-		 	<parameter name="url"
-			value="https://www.orangehrm.com/30-day-free-trial/" />
-		<parameter name="headless" value="true" />     
+		<!-- <parameter name="url"
+		value="https://www.orangehrm.com/30-day-free-trial/" />
+		<parameter name="headless" value="true" />     -->
 
 
 		<classes>
 			<class name="com.qa.opencartTest.AccountsPageTest" />
 		</classes>
-	</test>  -->
+	</test>
 
 	<!-- <test name="Search Result Page Test">
 		<parameter name="browser" value="chrome" />
