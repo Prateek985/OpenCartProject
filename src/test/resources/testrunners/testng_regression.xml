@@ -16,9 +16,10 @@ we dont want to define verbose any where it is defined already in testng        
 
 
 	<test name="Login Page Test chrome">
-		<parameter name="browser" value="chrome" />
-		<!-- 	<parameter name="url" value="https://www.google.com" />
-		<parameter name="headless" value="true" />      -->
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="125.0" />
+		<parameter name="testname" value="OpenCartTeam-Login Page Test" />
+		<!-- <parameter name="headless" value="true" />      -->
 
 		<classes>
 			<class name="com.qa.opencartTest.LoginPageTest" />
@@ -26,10 +27,10 @@ we dont want to define verbose any where it is defined already in testng        
 	</test>
 
 	<test name="Accounts Page Test">
-		<parameter name="browser" value="firefox" />
-		<!-- <parameter name="url"
-		value="https://www.orangehrm.com/30-day-free-trial/" />
-		<parameter name="headless" value="true" />     -->
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="124.0" />
+		<parameter name="testname" value="OpenCartTeam-Accounts Page Test" />
+		<!--	<parameter name="headless" value="true" />     -->
 
 
 		<classes>
@@ -49,16 +50,17 @@ we dont want to define verbose any where it is defined already in testng        
 	</test> -->
 
 	<test name="Product Info Page Test">
-		<parameter name="browser" value="edge" />
-		 	<parameter name="url" value="https://www.orangehrm.com/30-day-free-trial/" />
-		<parameter name="headless" value="true" />     
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="124.0" />
+		<parameter name="testname" value="OpenCartTeam-Product Info Page Test" />
+		
 
 
 		<classes>
 			<class name="com.qa.opencartTest.ProductPageInfoTest" />
 		</classes>
 	</test>
-<!--	<test name="Register Page Test">
+	<!--	<test name="Register Page Test">
 		<parameter name="browser" value="firefox" />
 		 	<parameter name="url"
 			value="https://www.orangehrm.com/30-day-free-trial/" />
